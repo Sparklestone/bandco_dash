@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brave &amp; Co — The Next 90 Days</title>
+<meta name="description" content="A plan to make Brave &amp; Co as easy to find as it is to believe in.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Brave &amp; Co — The Next 90 Days">
+<meta property="og:description" content="An 11-minute walkthrough of the plan.">
+<meta property="og:image" content="poster.jpg">
+<meta property="og:type" content="video.other">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1416; --maroon:#7b1e2b; --orange:#e8642a;
+    --paper:#ffffff; --tint:#f2eeec; --line:#e2dcd8;
+    --body:#4f4a48; --muted:#8a8380;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#f6f1ef; --paper:#141011; --tint:#1e1819; --line:#2e2628;
+      --body:#c7bfbc; --muted:#8e8582; --maroon:#d4707f; --orange:#ff8551;
+    }
+  }
+  *,*::before,*::after{box-sizing:inherit}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); -webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:clamp(24px,5vw,56px) clamp(18px,4vw,32px) 72px}
+  .eyebrow{font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--orange); margin:0 0 14px}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:clamp(30px,6vw,52px); line-height:1.1; letter-spacing:-.01em; margin:0 0 16px}
+  .lede{font-size:clamp(15px,2.1vw,18px); color:var(--body); margin:0 0 30px; max-width:60ch}
+  .player{position:relative; background:#000; border-radius:12px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.22); margin:0 0 14px}
+  video{display:block; width:100%; height:auto; background:#000}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; font-size:13px; color:var(--muted); margin:0 0 40px}
+  .dot{width:4px;height:4px;border-radius:50%;background:var(--line);flex:none}
+  h2{font-family:Fraunces,Georgia,serif; font-size:clamp(20px,3vw,26px); font-weight:600; margin:0 0 6px; letter-spacing:-.01em}
+  .sub{color:var(--body); font-size:14.5px; margin:0 0 20px; max-width:62ch}
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin:0 0 40px}
+  .card{background:var(--tint); border-radius:10px; padding:18px 18px 20px}
+  .card h3{font-family:Fraunces,Georgia,serif; font-size:17px; font-weight:600; margin:0 0 6px}
+  .card p{margin:0; font-size:13.5px; color:var(--body)}
+  .num{font-family:Fraunces,Georgia,serif; font-size:13px; font-weight:700; color:var(--orange); display:block; margin:0 0 8px; letter-spacing:.04em}
+  ol.six{list-style:none; counter-reset:six; margin:0 0 40px; padding:0; display:grid; gap:10px}
+  ol.six li{counter-increment:six; background:var(--tint); border-radius:10px; padding:15px 18px 16px 52px; position:relative}
+  ol.six li::before{content:counter(six); position:absolute; left:18px; top:15px; font-family:Fraunces,Georgia,serif; font-weight:700; font-size:17px; color:var(--orange)}
+  .ph{display:block;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon);margin-bottom:3px}
+  .act{display:block;font-family:Fraunces,Georgia,serif;font-size:16px;font-weight:600;margin-bottom:3px}
+  .why{display:block;font-size:13px;color:var(--body)}
+  @media (min-width:620px){ ol.six{grid-template-columns:1fr 1fr} }
+  ol.chapters{list-style:none; margin:0 0 40px; padding:0; border-top:1px solid var(--line)}
+  ol.chapters li{border-bottom:1px solid var(--line)}
+  ol.chapters button{width:100%; display:flex; gap:14px; align-items:baseline; text-align:left; background:none; border:0; padding:13px 4px; cursor:pointer; color:inherit; font:inherit; font-size:14.5px; transition:background .12s ease}
+  ol.chapters button:hover{background:var(--tint)}
+  ol.chapters button:focus-visible{outline:2px solid var(--orange); outline-offset:-2px}
+  .t{font-variant-numeric:tabular-nums; color:var(--muted); font-size:13px; flex:none; min-width:46px}
+  .ttl{flex:1}
+  .files{display:flex; flex-wrap:wrap; gap:10px; margin:0 0 40px}
+  .btn{display:inline-block; padding:11px 18px; border-radius:8px; font-size:14px; font-weight:500; text-decoration:none; border:1px solid var(--line); color:var(--ink); background:var(--paper); transition:border-color .15s ease, transform .1s ease}
+  .btn:hover{border-color:var(--maroon); transform:translateY(-1px)}
+  .btn.primary{background:var(--maroon); border-color:var(--maroon); color:#fff}
+  footer{border-top:1px solid var(--line); padding-top:22px; color:var(--muted); font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Prepared for Tracy &amp; Sean</p>
+  <h1>The Next 90&nbsp;Days</h1>
+  <p class="lede">
+    A plan to make Brave &amp; Co as easy to find as it is to believe in. Your sales deck already
+    says it. This is about getting the rest of the web, and every AI answering a founder's
+    question, to say it too.
+  </p>
+
+  <div class="player">
+    <video id="v" controls playsinline preload="metadata" poster="poster.jpg" src="explainer.mp4">
+      <a href="explainer.mp4">Download the video</a>
+    </video>
+  </div>
+  <p class="meta">
+    <span>11 min 17 sec</span><span class="dot"></span>
+    <span>21 sections</span><span class="dot"></span>
+    <span>Sound on</span>
+  </p>
+
+  <h2>The short version</h2>
+  <p class="sub">If you only take three things from the film, take these.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="num">01</span>
+      <h3>The answer is already written</h3>
+      <p>The sales deck names the problem in one sentence. The website takes five. Most of the work is moving language you already have.</p>
+    </div>
+    <div class="card">
+      <span class="num">02</span>
+      <h3>The offer is invisible online</h3>
+      <p>Thirty days, one complete brand, four deliverables, a real price. All of it lives in your sales deck, where nothing online can find it.</p>
+    </div>
+    <div class="card">
+      <span class="num">03</span>
+      <h3>Say one thing, consistently</h3>
+      <p>Three frameworks are running at once. A model repeats what a site reinforces, so competing names get you described as "a branding agency" rather than "thirty days, one complete brand."</p>
+    </div>
+  </div>
+
+  <h2>If you only did six things</h2>
+  <p class="sub">Out of everything in the plan, these six move the most. Two of them take an afternoon.</p>
+  <ol class="six">
+    <li><span class="ph">Phase 1</span><span class="act">Rewrite the AI summary file</span><span class="why">One paragraph replaces the UL Solutions text with who you are and what you sell.</span></li>
+    <li><span class="ph">Phase 1</span><span class="act">Declare who you are in code</span><span class="why">Organization schema with a sameAs list naming every profile as the same company.</span></li>
+    <li><span class="ph">Phase 2</span><span class="act">Lead with the outgrown brand line</span><span class="why">Stage-agnostic, and it never accidentally disqualifies the person reading it.</span></li>
+    <li><span class="ph">Phase 2</span><span class="act">Put the offer and the price on the page</span><span class="why">Thirty days. One complete brand. $30,000. Four named deliverables.</span></li>
+    <li><span class="ph">Phase 3</span><span class="act">Publish on a cadence</span><span class="why">Two a month turns one good article into a body of work.</span></li>
+    <li><span class="ph">Phase 3</span><span class="act">Own the comparison piece</span><span class="why">The agencies being recommended wrote the guides that recommend them.</span></li>
+  </ol>
+
+  <h2>Jump to a section</h2>
+  <p class="sub">Tap any line to skip straight to it.</p>
+  <ol class="chapters" id="ch"></ol>
+
+  <h2>Files</h2>
+  <p class="sub">The deck carries the same twenty-one sections if you'd rather read than watch.</p>
+  <div class="files">
+    <a class="btn primary" href="Brave-and-Co-Next-90-Days.pdf" target="_blank" rel="noopener">Read the deck (PDF)</a>
+    <a class="btn" href="explainer.mp4" download>Download the video</a>
+    <a class="btn" href="https://www.thisisbrave.co" target="_blank" rel="noopener">thisisbrave.co</a>
+  </div>
+
+  <footer>Brave &amp; Co — The Next 90 Days · Prepared September 2026</footer>
+
+</div>
+
+<script>
+  var CHAPTERS = [
+    [0,   "Opening"],
+    [16,  "The short version"],
+    [47,  "This is not a standing start"],
+    [69,  "Four gaps between the work and the world"],
+    [98,  "What the machines currently read"],
+    [129, "Four names is fine. Four unconnected records isn't."],
+    [182, "AI does not read your website to recommend you"],
+    [214, "The answer is already written"],
+    [248, "The line to lead with"],
+    [271, "Make \u201cwe meet you where you are\u201d visible"],
+    [305, "Does $30k hold up"],
+    [339, "Tracy is right. Keep the big work."],
+    [376, "Proof they can see themselves in"],
+    [430, "Three frameworks is the same as none"],
+    [491, "How to read the scores"],
+    [504, "Phase 1 \u2014 Make it readable"],
+    [546, "Phase 2 \u2014 Port the sales deck"],
+    [580, "Phase 3 \u2014 Get named in the answer"],
+    [606, "Phase 4 \u2014 Compound it"],
+    [632, "If you only did six things"],
+    [657, "Where we start"]
+  ];
+
+  function fmt(s){
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return m + ":" + (r < 10 ? "0" : "") + r;
+  }
+
+  var list = document.getElementById("ch");
+  var video = document.getElementById("v");
+
+  CHAPTERS.forEach(function(c){
+    var li = document.createElement("li");
+    var b = document.createElement("button");
+    b.type = "button";
+    var t = document.createElement("span");
+    t.className = "t";
+    t.textContent = fmt(c[0]);
+    var ttl = document.createElement("span");
+    ttl.className = "ttl";
+    ttl.textContent = c[1];
+    b.appendChild(t); b.appendChild(ttl);
+    b.addEventListener("click", function(){
+      try {
+        video.currentTime = c[0];
+        video.play();
+        video.scrollIntoView({ behavior: "smooth", block: "center" });
+      } catch (e) {}
+    });
+    li.appendChild(b);
+    list.appendChild(li);
+  });
+
+  // remember where they stopped, per viewer, best effort only
+  try {
+    var KEY = "brave90:pos";
+    var saved = parseFloat(localStorage.getItem(KEY) || "0");
+    if (saved > 10) {
+      video.addEventListener("loadedmetadata", function(){
+        if (saved < video.duration - 15) video.currentTime = saved;
+      }, { once: true });
+    }
+    var last = 0;
+    video.addEventListener("timeupdate", function(){
+      var now = Date.now();
+      if (now - last > 4000) {
+        last = now;
+        try { localStorage.setItem(KEY, String(video.currentTime)); } catch (e) {}
+      }
+    });
+  } catch (e) {}
+</script>
+</body>
+</html>
